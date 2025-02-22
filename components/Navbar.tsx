@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import logo from "../../public/logo.png";
-import User from "../../public/User.png";
+import logo from "../public/Logo.png";
+import User from "../public/User.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
 

@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import collectioncard from "../../public/Collection Card Row.png";
+import collectioncard from "../public/Collection Card Row.png";
 
 export default function Hero() {
   return (
