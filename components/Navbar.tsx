@@ -37,16 +37,16 @@ export default function Navbar() {
           Marketplace Ranking
         </Link>
         <Link
-          href="/connect-wallet"
+          href="/wallet"
           className="text-[#F5F5F5] drop-shadow-lg px-4 py-2 rounded"
         >
           Connect a Wallet
         </Link>
         <Link
-          href="/ranking"
+          href="/artist"
           className="text-[#F5F5F5] drop-shadow-lg px-4 py-2 rounded"
         >
-          Ranking
+          Artist
         </Link>
         <motion.button
           className="flex text-[#F5F5F5] w-15 drop-shadow-lg bg-[#A259FF] px-4 py-2 rounded-2xl items-center"
