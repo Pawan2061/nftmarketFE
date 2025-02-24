@@ -22,13 +22,16 @@ export default function Navbar() {
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.5 }}
     >
-      <motion.div
-        className="flex items-center"
-        whileHover={{ scale: 1.05 }}
-        transition={{ duration: 0.3 }}
-      >
-        <Image src={logo} alt="Company Logo" width={150} height={50} />
-      </motion.div>
+      <Link href="/">
+        <motion.div
+          className="flex items-center"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.3 }}
+        >
+          {" "}
+          <Image src={logo} alt="Company Logo" width={150} height={50} />
+        </motion.div>
+      </Link>
       <div className="hidden md:flex items-center space-x-4 font-semibold font-sans">
         <Link href="/marketplace" className="text-[#f5f5f5] drop-shadow-lg">
           Marketplace Ranking

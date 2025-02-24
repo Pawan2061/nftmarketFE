@@ -9,6 +9,7 @@ import { useEffect, useState, useRef } from "react";
 
 export default function Artist() {
   const [isVisible, setIsVisible] = useState(false);
+  const [showAll, setShowAll] = useState(false);
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -74,11 +75,11 @@ export default function Artist() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {cards.map((card) => (
+      <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4">
+        {cards.slice(0, showAll ? cards.length : 4).map((card) => (
           <motion.div
             key={card.id}
-            className="bg-[#1a1a1a] p-4 rounded-lg shadow-lg flex flex-col items-center relative w-64"
+            className="bg-[#1a1a1a] p-4 rounded-lg shadow-lg flex flex-col items-center relative w-full"
             initial={{ opacity: 0, scale: 0.9, rotate: -5 }}
             animate={{ opacity: 1, scale: 1, rotate: 0 }}
             exit={{ opacity: 0, scale: 0.9, rotate: 5 }}
@@ -114,6 +115,17 @@ export default function Artist() {
           </motion.div>
         ))}
       </div>
+
+      {!showAll && (
+        <div className="flex justify-center mt-4">
+          <button
+            onClick={() => setShowAll(true)}
+            className="bg-[#A259FF] text-white px-6 py-2 rounded-lg hover:bg-[#9e5bf7] transition duration-300"
+          >
+            Show More Artists
+          </button>
+        </div>
+      )}
     </motion.section>
   );
 }
