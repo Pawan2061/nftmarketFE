@@ -88,6 +88,15 @@ export default function Signup() {
             className="bg-white text-black p-2 w-full rounded-xl"
           />
         </div>
+        <motion.button
+          whileHover={{ y: -5, x: 10 }}
+          transition={{ duration: 0.1 }}
+          className="bg-[#A259FF] px-6 py-4 rounded-2xl flex gap-3 mx-auto md:mx-0 transition-transform duration-300 hover:scale-105 hover:bg-[#a777e7] shadow-md hover:shadow-lg"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+        >
+          Create Account
+        </motion.button>
       </motion.div>
     </div>
   );

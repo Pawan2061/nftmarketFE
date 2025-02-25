@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-// import logo from "../public/Logo.png";
 
 export default function Footer() {
   return (
@@ -14,7 +13,7 @@ export default function Footer() {
     >
       <div className="container mx-auto text-center">
         <Image
-          src="/logo.png"
+          src="/Logo.png"
           alt="Logo"
           width={120}
           height={40}
