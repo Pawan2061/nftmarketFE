@@ -53,10 +53,12 @@ export default function Navbar() {
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
         >
-          <span className="flex items-center space-x-1">
-            <Image src={User} alt="user" width={15} height={10} />
-            <span>Sign up</span>
-          </span>
+          <Link href="/signup">
+            <span className="flex items-center space-x-1">
+              <Image src={User} alt="user" width={15} height={10} />
+              <span>Sign up</span>
+            </span>
+          </Link>
         </motion.button>
       </div>
       <button
