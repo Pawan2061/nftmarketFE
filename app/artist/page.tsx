@@ -21,7 +21,9 @@ export default function Artist() {
   const minutes = Math.floor((timeLeft % 3600) / 60);
   const seconds = timeLeft % 60;
 
-  const handleScrollIntoView = (element: HTMLElement) => {
+  const handleScrollIntoView = (element: HTMLElement | null) => {
+    if (!element) return;
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -32,14 +34,10 @@ export default function Artist() {
       });
     });
 
-    if (element) {
-      observer.observe(element);
-    }
+    observer.observe(element);
 
     return () => {
-      if (element) {
-        observer.unobserve(element);
-      }
+      observer.unobserve(element);
     };
   };
 
